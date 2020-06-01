@@ -1,14 +1,17 @@
 {
-  "name": "day-time-seconds",
-  "version": "0.0.1",
-  "description": "Used to facilitate the manipulation of days measured in seconds",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [
-    "time"
-  ],
-  "author": "Fnoquiq",
-  "license": "MIT"
+	"name": "day-time-seconds",
+	"version": "0.0.1",
+	"description": "Used to facilitate the manipulation of days measured in seconds",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"keywords": [
+		"time",
+		"day",
+		"single-day",
+		"seconds"
+	],
+	"author": "Fnoquiq",
+	"license": "MIT"
 }
