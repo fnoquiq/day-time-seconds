@@ -26,27 +26,19 @@ Example usage:
 
 ```js
 const DayTime = require('day-time-seconds');
-const time = new DayTime().now();
+const time = DayTime.now();
 
 console.log(time.toString());
 // 23:49:59 (current time example)
 ```
+
+---
 
 ## :memo: Documentation
 
-### Exceptions
-
-The seconds values must range from 0 to 86399, otherwise, an exception will be thrown.
-
-```js
-const time = new DayTime(86500);
-
-// Error: The value (seconds: 86500) is out of range
-```
-
 ### Methods
 
-`static now()`: The static DayTime.now() method returns the number of seconds elapsed since 00:00:00.
+`now()`: The **static** `DayTime.now()` method returns the number of seconds elapsed since `00:00:00`.
 
 ```js
 const time = new DayTime().now();
@@ -55,7 +47,7 @@ console.log(time.toString());
 // 23:49:59 (current time example)
 ```
 
-`getTotalSeconds()`: Get the seconds related to time.
+`getTotalSeconds()`: Get the total seconds elapsed since `00:00:00`.
 
 ```js
 const time = new DayTime(3600);
@@ -65,7 +57,7 @@ const seconds = time.getTotalSeconds();
 // seconds -> 3600
 ```
 
-`setTotalSeconds(seconds)`: Set the time using seconds.
+`setTotalSeconds(seconds)`: Set the total seconds elapsed since `00:00:00`.
 
 ```js
 const time = new DayTime(3600);
@@ -75,7 +67,7 @@ time.setTotalSeconds(7200);
 // 02:00:00
 ```
 
-`getTotalMilliseconds()`: Get the seconds related to time, converted into milliseconds.
+`getTotalMilliseconds()`: Get the total seconds elapsed since `00:00:00`, converted into milliseconds.
 
 ```js
 const time = new DayTime(3600);
@@ -85,7 +77,7 @@ const ms = time.getTotalMilliseconds();
 // ms -> 3600000
 ```
 
-`setTotalMilliseconds(milliseconds)`: Set the time with seconds using milliseconds.
+`setTotalMilliseconds(milliseconds)`: Set the total seconds elapsed since `00:00:00`, converted into milliseconds.
 
 ```js
 const time = new DayTime(3600);
@@ -194,9 +186,21 @@ console.log(time.getTimeFormatted());
 // 01:00:00 (default separator is ':')
 ```
 
+or with another separator params
+
 ```js
 const time = new DayTime(3602);
 
 console.log(time.getTimeFormatted('|'));
 // 01|00|02
+```
+
+### Exceptions
+
+The seconds values must range from **0** to **86399**, otherwise, an exception will be thrown.
+
+```js
+const time = new DayTime(86500);
+
+// Error: The value (seconds: 86500) is out of range
 ```

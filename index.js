@@ -87,6 +87,4 @@ class DayTime {
 	}
 }
 
-module.exports = {
-	DayTime,
-};
+module.exports = DayTime;

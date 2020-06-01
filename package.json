@@ -1,6 +1,6 @@
 {
 	"name": "day-time-seconds",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"description": "Used to facilitate the manipulation of days measured in seconds",
 	"main": "index.js",
 	"scripts": {
