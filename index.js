@@ -74,9 +74,9 @@ class DayTime {
 	}
 	isValidSecondsRange(seconds) {
 		seconds = Math.floor(seconds);
-		if (seconds < 0 || seconds > 86400) {
+		if (seconds < 0 || seconds >= 86400) {
 			throw new Error(
-				`The value (seconds: ${seconds}) is out of range`,
+				`The value (seconds: ${seconds}) is out of range: (0 to 86399)`,
 				seconds
 			);
 		}
