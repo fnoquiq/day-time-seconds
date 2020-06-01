@@ -50,7 +50,7 @@ class DayTime {
 		this.seconds = seconds;
 	}
 	setTotalMilliseconds(milliseconds) {
-		const seconds = milliseconds / 1000;
+		const seconds = Math.floor(milliseconds / 1000);
 		this.isValidSecondsRange(seconds);
 		this.seconds = seconds;
 	}
@@ -73,6 +73,7 @@ class DayTime {
 		this.setTotalSeconds(this.seconds - seconds);
 	}
 	isValidSecondsRange(seconds) {
+		seconds = Math.floor(seconds);
 		if (seconds < 0 || seconds > 86400) {
 			throw new Error(
 				`The value (seconds: ${seconds}) is out of range`,
@@ -81,7 +82,6 @@ class DayTime {
 		}
 		return true;
 	}
-
 	toString() {
 		return this.getTimeFormatted();
 	}
